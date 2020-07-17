@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+
+  <androidx.appcompat.widget.AppCompatCheckBox
+    android:id="@+id/checkboxFavorite"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:button="@drawable/drawable_favorite_checkbox_dark_bg"
+    android:checked="false" />
+</RelativeLayout>

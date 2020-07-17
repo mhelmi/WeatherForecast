@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".features.home.ui.fragments.CityWeatherFragment">
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvSearchCity"
+    android:name="com.bugevil.mhelmi.weatherforecast.features.home.ui.fragments.SearchCityFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutManager="LinearLayoutManager"
+    tools:context=".features.home.ui.fragments.SearchCityFragment"
+    tools:itemCount="20"
+    tools:listitem="@layout/item_city" />
+
+  <include
+    android:id="@+id/layoutProgress"
+    layout="@layout/layout_progress" />
+</androidx.constraintlayout.widget.ConstraintLayout>

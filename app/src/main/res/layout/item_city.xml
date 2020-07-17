@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <com.google.android.material.card.MaterialCardView
+    android:id="@+id/cardViewCity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="@dimen/_4sdp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginStart="@dimen/_10sdp"
+      android:layout_marginTop="@dimen/_10sdp"
+      android:layout_marginEnd="@dimen/_10sdp"
+      android:layout_marginBottom="@dimen/_10sdp">
+
+      <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        app:layout_constraintEnd_toStartOf="@+id/checkboxFavorite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkboxFavorite"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="wrap_content"
+        android:button="@drawable/drawable_favorite_checkbox_light_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

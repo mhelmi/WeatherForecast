@@ -1,0 +1,22 @@
+<resources>
+  <string name="app_name">WeatherForecast</string>
+  <string name="action_settings">Settings</string>
+  <!-- Strings used for fragments for navigation -->
+  <string name="home_fragment_label">Home Fragment</string>
+  <string name="city_weather_fragment_label">City Weather Fragment</string>
+  <string name="search_city_fragment_label">Search for cities</string>
+
+  <string name="hello_first_fragment">Hello first fragment</string>
+  <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+  <string name="search_title">Search</string>
+  <string name="search_hint">Search for a city</string>
+  <string name="search_for_cities">Search for cities…</string>
+  <string name="favorite">Favorite</string>
+  <string name="temp_">Temperature: %1$s°</string>
+  <string name="loading">Loading…</string>
+  <string name="connection_error">Connection Error!</string>
+  <string name="error_failed_setup_app">Failed setup app data!</string>
+  <string name="error_no_favorite_cities_found">No favorite cities found!</string>
+  <string name="error_no_search_cities_found">No cities found by this name!</string>
+  <string name="loading_first_time">Setup app for the first time…</string>~
+</resources>

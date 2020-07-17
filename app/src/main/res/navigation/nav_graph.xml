@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/nav_graph"
+  app:startDestination="@id/homeFragment">
+
+  <fragment
+    android:id="@+id/searchCityFragment"
+    android:name="com.bugevil.mhelmi.weatherforecast.features.home.ui.fragments.SearchCityFragment"
+    tools:layout="@layout/fragment_search_city" />
+
+  <fragment
+    android:id="@+id/homeFragment"
+    android:name="com.bugevil.mhelmi.weatherforecast.features.home.ui.fragments.HomeFragment"
+    tools:layout="@layout/fragment_home" />
+
+  <fragment
+    android:id="@+id/cityWeatherFragment"
+    android:name="com.bugevil.mhelmi.weatherforecast.features.home.ui.fragments.CityWeatherFragment"
+    tools:layout="@layout/fragment_city_weather">
+    <argument
+      android:name="city"
+      app:argType="com.bugevil.mhelmi.weatherforecast.features.home.data.models.City"
+      app:nullable="false" />
+  </fragment>
+
+  <action
+    android:id="@+id/action_navigate_to_searchCityFragment"
+    app:destination="@id/searchCityFragment" />
+
+  <action
+    android:id="@+id/action_navigate_to_cityWeatherFragment"
+    app:destination="@id/cityWeatherFragment"
+    app:popUpTo="@+id/homeFragment" />
+
+</navigation>

@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+  compileSdkVersion 30
+  buildToolsVersion "30.0.0"
+
+  defaultConfig {
+    applicationId "com.bugevil.mhelmi.weatherforecast"
+    minSdkVersion 17
+    targetSdkVersion 30
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    buildConfigField 'String', 'WEATHER_API_KEY', '"ba5f29a79aabb3b41db2c2194a4c7b12"'
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+      buildConfigField 'String', 'MAIN_URL', '"https://api.openweathermap.org/"'
+    }
+    debug {
+      buildConfigField 'String', 'MAIN_URL', '"https://api.openweathermap.org/"'
+    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+  buildFeatures.viewBinding = true
+}
+
+dependencies {
+  implementation fileTree(dir: "libs", include: ["*.jar"])
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation "androidx.core:core-ktx:$ktx_version"
+  // appcompat
+  implementation "androidx.appcompat:appcompat:$appcompat_version"
+  // material
+  implementation "com.google.android.material:material:$material_version"
+  // constraintLayout
+  implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+  // activity
+  implementation "androidx.activity:activity-ktx:$activity_version"
+  // fragment
+  implementation "androidx.fragment:fragment-ktx:$fragment_version"
+  implementation "com.google.android.gms:play-services-location:$play_services_location_version"
+  // testing
+  testImplementation "junit:junit:$test_junit_version"
+  androidTestImplementation "androidx.test.ext:junit:$android_test_junit_version"
+  androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+  // preference
+  implementation "androidx.preference:preference-ktx:$preference_version"
+  // coroutines
+  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+  // okhttp3
+  implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_version"
+  // retrofit 2
+  implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+  implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+  // navigation component
+  implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+  implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+  // dagger 2
+  implementation "com.google.dagger:dagger:$dagger_version"
+  kapt "com.google.dagger:dagger-compiler:$dagger_version"
+  kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+  // Gson
+  implementation "com.google.code.gson:gson:$gson_version"
+  // lifecycle (ViewModel & LiveData)
+  implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_extensions_version"
+  implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_extensions_version"
+  implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_extensions_version"
+  // dimens libraries
+  implementation "com.intuit.sdp:sdp-android:$dimens_version"
+  // Room components
+  implementation "androidx.room:room-ktx:$room_version"
+  kapt "androidx.room:room-compiler:$room_version"
+}
