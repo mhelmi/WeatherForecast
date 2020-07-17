@@ -6,7 +6,7 @@ Simple app utilize a weather API http://openweathermap.org/API to search for a c
 I choose to use Clean architecture based on MVVM (Model-View-ViewModel)
 The following diagram shows all the layers and how each layer interact with each other. This architecture using a layered software architecture.
 ![MVVM](https://github.com/mhelmi/WeatherForecast/blob/master/art/mvvm_architecture.png)
-![Clean Architecture](https://github.com/mhelmi/WeatherForecast/blob/master/art/clean_architecture.jpg)
+![Clean Architecture](https://github.com/mhelmi/WeatherForecast/blob/master/art/clean_architecture.png)
 ## Built With 🛠
 * [Kotlin](https://kotlinlang.org/) - official programming language for Android development.
 * [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) - for asynchronous or non-blocking programming.
